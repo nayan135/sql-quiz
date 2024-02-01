@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#question-container {
+    margin-top: 20px;
+    display: none;
+}
+
+#user-answer {
+    width: 300px;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+#question-container {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
