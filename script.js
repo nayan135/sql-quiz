@@ -107,6 +107,8 @@ const sqlQuestions = {
 };
 
 let currentQuestionIndex = -1;
+let correctAnswers = 0;
+let questionsAttempted = 0;
 
 function askQuestion() {
     currentQuestionIndex = Math.floor(Math.random() * sqlQuestions.questions.length);
@@ -120,14 +122,23 @@ function askQuestion() {
 }
 
 function checkAnswer() {
+    questionsAttempted++;
+
     const userAnswer = document.getElementById('user-answer').value.trim();
     const randomQuestion = sqlQuestions.questions[currentQuestionIndex];
     const correctAnswer = randomQuestion.answer;
 
     if (userAnswer.toUpperCase() === correctAnswer.toUpperCase()) {
+        correctAnswers++;
         document.getElementById('result').innerText = 'Correct! Well done!';
     } else {
         document.getElementById('result').innerText = `Incorrect. The correct answer is:\n${correctAnswer}`;
     }
 
+    calculateProgress();
+}
+
+function calculateProgress() {
+    const progressPercentage = (correctAnswers / questionsAttempted) * 100;
+    document.getElementById('progress').innerText = `Progress: ${progressPercentage.toFixed(2)}%`;
 }
