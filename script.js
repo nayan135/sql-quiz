@@ -61,7 +61,7 @@ const sqlQuestions = {
         },
         {
             "Q-17": "Write an SQL query to fetch worker names with salaries >= 50000 and <= 100000.",
-            "answer": "SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS Worker_Name, Salary FROM Worker WHERE WORKER_ID IN (SELECT WORKER_ID FROM Worker WHERE Salary BETWEEN 50000 AND 100000);"
+            "answer": "SELECT FIRST_NAME, SALARY FROM Worker WHERE SALARY BETWEEN 50000 AND 100000;"
         },
         {
             "Q-18": "Write an SQL query to print details of the Workers who are also Managers.",
