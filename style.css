@@ -4,6 +4,14 @@ body {
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
 button {
     padding: 10px;
     font-size: 16px;
